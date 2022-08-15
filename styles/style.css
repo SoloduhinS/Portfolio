@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --main-bg: #44474e;
+    --left-text-accent-color: #fae6d2;
+    --left-text-color: #dbdfe5;
+    --right-text-color: #9b9b9b;
+}
+main {
+    display: flex;
+    align-items: stretch;
+}
+.hidden {
+    opacity: 0 !important;
+    height: 0px !important;
+    margin: 0 !important;
+    visibility: hidden !important;
+}
+.left-section {
+    flex-basis: 20%;
+    height: 200vh;
+    background-color: var(--main-bg);
+    padding: 50px;
+}
+
+.right-section {
+    flex-basis: 80%;
+    height: 100vh;
+    padding: 50px 200px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    overflow-y: scroll;
+}
+
+.right-section-content {
+    margin-top: 50px;
+}
+.tab-content {
+    display: none;
+}
+.active-tab-content {
+    display: block;
+}
+.tabs {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    left: calc(20% + 140px);
+    background-color: white;
+}
+
+.tabs ul {
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+}
+.tabs ul li {
+    padding: 7px 15px;
+    border-bottom: 2px solid transparent;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--main-bg);
+    cursor: pointer;
+}
+
+.tabs ul li.active {
+    border-bottom-color: var(--main-bg);
+}
+
+.head-info {
+    padding-bottom: 40px;
+    border-bottom: 2px solid var(--left-text-accent-color);
+}
+.head-info img {
+    display: block;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.head-info h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 20px 0;
+    color: var(--left-text-accent-color);
+
+} 
+
+.head-info h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--left-text-accent-color);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.personal-info {
+    margin-top: 40px;
+
+}
+
+.personal-info-text {
+    margin-bottom: 60px;
+
+}
+
+.personal-info-text h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--left-text-accent-color);
+    margin-bottom: 7px;
+}
+
+.personal-info-text p {
+    color: var(--left-text-color);
+    font-size: 14px;
+
+}
+.info-content:not(:last-child) {
+    margin-bottom: 50px;
+    transition: 0.3s all;
+}
+
+.info-content.hidden-section:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.info-content h2 {
+    color: var(--main-bg);
+    background-color: var(--left-text-accent-color);
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 7px 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.info-content.hidden-section h2 {
+    margin-bottom: 0;
+}
+
+.text-info {
+    margin-bottom: 30px;
+    opacity: 1;
+    height: auto;
+    transition: 0.3s all;
+    visibility: visible;
+}
+
+.text-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.text-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.text-info p {
+    font-size: 14px;
+    color: var(--right-text-color);
+
+}
+
+.counters-info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 250px;
+}
+.counter {
+    text-align: center;
+    margin: 20px;
+}
+.counter .value {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.counter h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+
+@media (max-width:1200px) {
+    .counters-info {
+       grid-template-columns: 1fr;
+    }
+    .left-section {
+        padding: 20 50px;
+    }
+
+    .right-section{
+        padding: 0 30px;
+    }
+    .right-section-header {
+        padding: 0 30px;
+    }
+    .tab-content {
+        padding: 0 50px;
+    }
+    .counters-info {
+        margin-top: 100px;
+    }
+};
+
+@media (max-width:1000px) {
+    .left-section{
+        padding: 0 20px;
+    }
+
+    .right-section {
+        padding: 0 20px;
+    }
+};
+
+@media (max-width:875px) {
+    
+}
